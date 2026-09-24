@@ -134,6 +134,10 @@ void VanjeelidarComponent::VanjeeCloudPutCallback(
 }
 
 void VanjeelidarComponent::PreparePointsMsg(PointCloud& msg) {
+  if (msg.point_size() == 0) {
+    return;
+  }
+
   msg.set_height(1);
   msg.set_width(msg.point_size() / msg.height());
 
@@ -171,8 +175,8 @@ void VanjeelidarComponent::ProcessCloud() {
           p.timestamp + msg->timestamp));
     }
     apollo_pc->set_is_dense(msg->is_dense);
-    this->PreparePointsMsg(*apollo_pc);
     if (apollo_pc->point_size() != 0) {
+      this->PreparePointsMsg(*apollo_pc);
       WritePointCloud(apollo_pc);
     }
   }

@@ -27,7 +27,7 @@ angle_path_ver: ""
 
 **model**
 
-This is the lidar model, since this configuration file is for vanjee_720_16, we set the model="vanjee_720_16".The parameter are as followed below:vanjee_720_16,vanjee_720_32,vanjee_722 and vanjee_722f.
+This is the lidar model, since this configuration file is for vanjee_720_16, we set the model="vanjee_720_16".The parameter are as followed below:vanjee_720_16,vanjee_720_32,vanjee_722,vanjee_722f,vanjee_750 and vanjee_760.
 
 **connect_type**
 
